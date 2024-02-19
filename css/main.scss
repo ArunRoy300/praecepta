@@ -5,12 +5,54 @@
 
 // START pracepta color palette
 
+/* SCSS HEX */
+// praecepta general colors
+$white: #ffffff;
+$solid_black: #111111;
+$praecepta_deflt_colr: #08376b;
+// praecepta icon colors
+$icn_colr_0: #b0522f;
+$icn_colr_1: #9aeba6;
+$icn_colr_2: #2f90b0;
+// praecepta shape 1 colors
+$praecepta_txt_colr: #08376b;
+$praecepta_bg_light_light: #f5f5f5;
+
+/* SCSS HSL */
+$icn_colr_0: hsla(16, 58%, 44%, 1);
+$icn_colr_1: hsla(129, 67%, 76%, 1);
+$icn_colr_1: hsla(195, 58%, 44%, 1);
+
+$praecepta_txt_colr: hsla(212, 86%, 23%, 1);
+$praecepta_bg_light: hsla(0, 0%, 96%, 1);
+
+/* SCSS RGB */
+$icn_colr_0: rgba(176, 82, 47, 1);
+$icn_colr_1: rgba(154, 235, 166, 1);
+$icn_colr_2: rgba(47, 144, 176, 1);
+$praecepta_txt_colr: rgba(8, 55, 107, 1);
+$praecepta_bg_light: rgba(245, 245, 245, 1);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #b0522fff, #9aeba6ff, #2f90b0ff, #08376bff, #f5f5f5ff);
+$gradient-right: linear-gradient(90deg, #b0522fff, #9aeba6ff, #2f90b0ff, #08376bff, #f5f5f5ff);
+$gradient-bottom: linear-gradient(180deg, #b0522fff, #9aeba6ff, #2f90b0ff, #08376bff, #f5f5f5ff);
+$gradient-left: linear-gradient(270deg, #b0522fff, #9aeba6ff, #2f90b0ff, #08376bff, #f5f5f5ff);
+$gradient-top-right: linear-gradient(45deg, #b0522fff, #9aeba6ff, #2f90b0ff, #08376bff, #f5f5f5ff);
+$gradient-bottom-right: linear-gradient(135deg, #b0522fff, #9aeba6ff, #2f90b0ff, #08376bff, #f5f5f5ff);
+$gradient-top-left: linear-gradient(225deg, #b0522fff, #9aeba6ff, #2f90b0ff, #08376bff, #f5f5f5ff);
+$gradient-bottom-left: linear-gradient(315deg, #b0522fff, #9aeba6ff, #2f90b0ff, #08376bff, #f5f5f5ff);
+$gradient-radial: radial-gradient(#b0522fff, #9aeba6ff, #2f90b0ff, #08376bff, #f5f5f5ff);
+
 // END pracepta color palette
 
 // START custom css
 
 html, body {
     height: 100%;
+    background-color: $white;
+    color: $solid_black;
+    font-size: 16px;
   }
   
   #wrap {
@@ -19,16 +61,63 @@ html, body {
   
   #main {
     overflow:auto;
-    padding-bottom:150px; /* this needs to be bigger than footer height*/
+    padding-bottom:50px; /* this needs to be bigger than footer height*/
+  }
+  a {
+    color: $praecepta_txt_colr;
+  }
+
+  .navbar {
+    background-color: $praecepta_txt_colr;
+    box-shadow: rgba(17, 17, 17, 0.5) 0px 0px 8px 0px;
+    .navbar-brand, .nav-item .nav-link, .navbar-toggler {
+      color: $white;
+    }
+    .navbar-nav {
+      .nav-item {
+
+      }
+    }
   }
   
   .footer {
     position: relative;
-    margin-top: -150px; /* negative value of footer height */
-    height: 150px;
+    margin-top: -50px; /* negative value of footer height */
+    height: 50px;
     clear:both;
-    padding-top:20px;
+    background-color: $praecepta_bg_light;
+    box-shadow: 0px 4px 8px 0px rgba(17, 17, 17, 0.50);
+    border-top: 1px solid rgba(17, 17, 17, 0.18);
+    color: $solid_black;
+    display: flex;
+    align-items: center;
+    .footer-list{
+      list-style: none;
+      padding: 0;
+      margin: 0;  
+      .footer-listitem {
+        display: inline-block;
+        a {
+          color: $praecepta_deflt_colr;
+          text-decoration: none;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+        &:not(:last-child) {
+          margin-right: 0.8rem;
+        }
+      }
+    }
   } 
+
+
+  .btn {
+    &.btn-primary {
+      background-color: $praecepta_txt_colr;
+      border-color: $praecepta_deflt_colr;
+    }
+  }
 
 // END custom css
 

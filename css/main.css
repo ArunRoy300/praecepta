@@ -20201,8 +20201,15 @@ textarea.form-control-lg {
   content: "賈";
 }
 
+/* SCSS HEX */
+/* SCSS HSL */
+/* SCSS RGB */
+/* SCSS Gradient */
 html, body {
   height: 100%;
+  background-color: #ffffff;
+  color: #111111;
+  font-size: 16px;
 }
 
 #wrap {
@@ -20211,13 +20218,52 @@ html, body {
 
 #main {
   overflow: auto;
-  padding-bottom: 150px; /* this needs to be bigger than footer height*/
+  padding-bottom: 50px; /* this needs to be bigger than footer height*/
 }
 
+a {
+  color: rgb(8, 55, 107);
+}
+
+.navbar {
+  background-color: rgb(8, 55, 107);
+  box-shadow: rgba(17, 17, 17, 0.5) 0px 0px 8px 0px;
+}
+.navbar .navbar-brand, .navbar .nav-item .nav-link, .navbar .navbar-toggler {
+  color: #ffffff;
+}
 .footer {
   position: relative;
-  margin-top: -150px; /* negative value of footer height */
-  height: 150px;
+  margin-top: -50px; /* negative value of footer height */
+  height: 50px;
   clear: both;
-  padding-top: 20px;
+  background-color: rgb(245, 245, 245);
+  box-shadow: 0px 4px 8px 0px rgba(17, 17, 17, 0.5);
+  border-top: 1px solid rgba(17, 17, 17, 0.18);
+  color: #111111;
+  display: flex;
+  align-items: center;
+}
+.footer .footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer .footer-list .footer-listitem {
+  display: inline-block;
+}
+.footer .footer-list .footer-listitem a {
+  color: #08376b;
+  text-decoration: none;
+}
+.footer .footer-list .footer-listitem a:hover {
+  text-decoration: underline;
+}
+.footer .footer-list .footer-listitem:not(:last-child) {
+  margin-right: 0.8rem;
+}
+
+.btn.btn-primary {
+  background-color: rgb(8, 55, 107);
+  border-color: #08376b;
 }/*# sourceMappingURL=main.css.map */
